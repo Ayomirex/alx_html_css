@@ -1,0 +1,35 @@
+/* Make the whole body stack vertically */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+/* Make the middle part (main) go sideways */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* use remaining space */
+}
+
+/* Make article take 2/3 of the width */
+article {
+  flex: 2;
+  overflow-y: auto; /* scroll if needed */
+  padding: 1em;
+  background-color: lightblue;
+}
+
+/* Make aside take 1/3 of the width */
+aside {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1em;
+  background-color: lightgray;
+}
+
+/* Just style the top and bottom */
+header, footer {
+  padding: 1em;
+  background-color: orange;
+  text-align: center;
+}
